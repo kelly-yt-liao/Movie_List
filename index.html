@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 注意: 通常 head body 都會同時載入bootstrap ; 以讓整個網頁都能同時使用bootstrap這個html+css+js的前端框架library~. -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- 載入bootstrap, font-awsome等套件-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <!-- navigation -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+      <span class="navbar-brand mb-0 h1">Please choose your target movie category!</span>
+    </div>
+  </nav>
+
+  <!-- data-panel: 左側為nav list, 右側為圖形化之movie list-->
+
+  <div class="container mt-8">
+
+    <div class="d-flex flex-row" id="data-panels">
+
+      <div class="col-4">
+        <ul id="nav-list" class="nav nav-pills flex-column">
+          <!-- display nav list for diff movie categories here -->
+        </ul>
+      </div>
+
+      <!-- <div class="col-8" id="movie-list"> -->
+      <div class="d-flex flex-wrap justify-content-start flex-row flex-row" id="movie-list">
+        <!-- display the choosed category of movie list here -->
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- 載入axios, jquery, popper, bootstrap等套件 與 本機端的 Q1_movie_list.js 檔案. -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+  <script src="movie_list.js"></script>
+</body>
+
+</html>
